@@ -1,0 +1,264 @@
+Big O Notation
+
+What is Big O ?
+    - Big O is the language and metric we use to describe the efficiency of algorithms.
+    
+
+Time Complexity : 
+    - A way of showing how the runtime of a function increases as the size of file increases.
+    - we measure the number of opertaions.
+
+
+Big O Notations :
+    - Big O : 
+        The complexity is going to be less or equal to the worst case.
+    
+    - Big Ω : 
+        The complexity is going to be at least more than the best case.
+
+    - Big Θ :
+        The complexity is going to be between the worst and the best cases.
+    
+
+Big O -
+    • O(1) :
+        - Referred as Constant time complexity
+
+        Eg- 
+            public class main {
+                public static int MultiplyNumbers(int n) {
+                    return n*n;
+                }
+
+                public static void main(String[] args) {
+                    System.out.println(MultiplyNumbers(3))
+                }
+            }
+
+            Output- 9
+
+    • O(n) :
+        - Depends on the Input Data and also referred as Linear time complexity
+
+        Eg-
+            public class main {
+                public static void printNumbers(int n) {
+                    for(int i=0; i<n; i++) {
+                        System.out.print(i + " ");
+                    }
+                }
+
+                public static void main(String[] args) {
+                    printNumbers(10);
+                }
+            }
+
+            Output- 0 1 2 3 4 5 6 7 8 9
+
+        Drop Constants :
+
+        O(n) maybe faster than O(1)
+
+            public class main {
+                public static void printNumbers(int n) {
+                    for(int i=0; i<n; i++) {
+                        System.out.print(i + " ");
+                    }
+
+                    for(int j=0; j<n; j++) {
+                        System.out.print(j + " ");
+                    }
+                }
+
+                public static void main(String[] args) {
+                    printNumbers(5);
+                }
+            }
+
+            Output- 0 1 2 3 4 0 1 2 3 4
+            - The overall time complexity will be O(n) + O(n) ---> O(n + n) ---> O(2n) ----> O(n)
+
+
+    • O(n²) :
+        - Also referred as Quadratic time complexity
+
+        Eg- 
+            public class main {
+                public static void printNumbers(int n) {
+                    for(int i=0; i<n; i++) {
+                        for(int j=0; j<n; j++) {
+                            System.out.println(i + " " + j);
+                        }
+                    }
+                }
+
+                public static void main(String[] args) {
+                    printNumbers(3);
+                }
+            }
+
+            Output- 0 0
+                    0 1
+                    0 2
+                    1 0
+                    1 1
+                    1 2
+                    2 0
+                    2 1
+                    2 2
+    
+        Drop Non Dominant Terms :
+            public class main {
+                public static void printNumbers(int n) {
+                    for(int i=0; i<n; i++) {
+                        for(int j=0; j<n; j++) {
+                            System.out.println(i + " " + j);
+                        }
+                    }
+
+                    for(int k=0; k<n; k++) {
+                            System.out.println(j);
+                        }
+                }
+
+                public static void main(String[] args) {
+                    printNumbers(3);
+                }
+            }
+
+            Output-
+                0 0
+                0 1
+                0 2
+                1 0
+                1 1
+                1 2
+                2 0
+                2 1
+                2 2
+                0
+                1
+                2
+
+            - The overall time complexity will be O(n²) + O(n) ---> O(n² + n) ----> O(n²)
+
+    • O(logN) :
+
+        2^3=8
+        log2^8=3
+            Eg- 
+                for (int i = 1; i <= n; i *= 2) {
+                    System.out.println(i);
+                }
+
+                In this the value of i doubles in each iteration.
+
+
+    Order: 
+        O(1) < O(logN) < O(n) < O(n²)
+
+https://res.cloudinary.com/practicaldev/image/fetch/s--ark_FZG1--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/1omv0tmikzeaj24z8ps2.jpeg
+
+
+Add vs Multiply :
+
+        • public lass main {
+              public static void printNumbers(int a, int b) {
+                  for(int  i=0; i<a; i++) {
+                      System.out.println(i);
+                  }
+  
+                  for(int j=0; j<b; j++) {
+                      System.out.println(j);
+                  }
+              }
+          }
+
+          In this case the time complexity will be O(a + b) instead of O(n) as a ≠ n and b ≠ n
+
+        • public class main {
+              public static void printNumbers(int a, int b) {
+                  for(int  i=0; i<a; i++) {
+                      for(int j=0; j<b; j++) {
+                          System.out.println(i+" "+j);
+                      }
+                  } 
+              }
+          }
+
+          In this case the time complexity will be O(a * b) instead of O(n²) as a ≠ n and b ≠ n
+
+
+Space Complexity :
+    - The Amount of the memory a code uses.
+
+    Eg- 
+        public class main {
+            public static int sumNumber(int n) {
+                if(n<=0) {
+                    return 0;
+                }
+
+                return n + sumNumber(n-1);
+            }
+
+            public static void main(String[] args) {
+                System.out.println(sumNumber(3));
+            }
+        }
+
+        Output- 6
+    
+    This example has the Space complexity of O(n)
+
+
+    Eg-
+        public class main {
+            public static int pairSumSequence(int n) {
+                int total = 0;
+                for(int i = 0; i <= n; i++) {
+                    total = total + pairSum(i, i+1);
+                }
+
+                return total;
+            }
+
+            public static int pairSum(int a, int b) {
+                return a + b;
+            }
+
+            public static void main(String[] args) {
+                System.out.println(pairSumSequence(3));
+            }
+        }
+
+        Output- 16
+
+    This example has the Space complexity of O(1)
+
+    waterloo website-java flow of code
+
+
+How to measure the Code using Big O ?
+    • Rule 1: 
+        - Any assignment statements and if statements that are executed once regardless of the size of the problem.
+
+        - O(1)
+
+    • Rule 2:
+        - A simple for loop from 0 to n (with no internal loops)
+
+        - O(n)
+
+    • Rule 3:
+        - A nested llops of the same type takes quadratic time complexity
+
+        - O(n²)
+
+    • Rule 4:
+        - A loop, in which the controlling parameter is divided by two at each step
+
+        - O(log n)
+
+    • Rule 5:
+        - When dealing with multiple statements, just add them up.

@@ -1,0 +1,10 @@
+When we create an array , we: 
+
+- Declare - creates a reference to array 
+- Instantiation of an array - creates an array 
+- Initialization - assigns values to cells in array
+
+dataType[] arr
+arr = new dataType[] 
+arr[0] = 1 
+arr[1] = 2 
