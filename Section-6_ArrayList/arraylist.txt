@@ -1,0 +1,47 @@
+🧠 What is an ArrayList?
+        ArrayList is a resizable array implementation in Java.
+
+        Part of the java.util package.
+
+        Unlike arrays, ArrayList can grow and shrink in size dynamically.
+
+        It stores elements in order and allows duplicates.
+
+
+import java.utils.ArrayList;
+import java.utils.Arrays;
+
+ArrayList<Type> arrayListName = new ArrayList<Type>()
+
+ArrayList arrayListName = new ArrayList()
+
+Time complexity-O(1)
+Space complexity-O(N)
+
+-We cannot add an element in our array if the given array is short than that of our index at which we want to insert it.
+
+-What Does "Amortized O(1)" Mean?
+Normal O(1) means constant time for every operation.
+
+Amortized O(1) means:
+
+Most add() operations at the end take constant time.
+
+Occasionally, when the internal array is full, it must be copied to a bigger array, which takes O(n) time.
+
+But since resizing happens infrequently, the average cost per add() is still O(1) over many operations.
+
+So, add() in ArrayList is amortized O(1).
+
+Example-
+
+ArrayList<String> names = new ArrayList<>();
+
+names.add("Alice");
+names.add("Bob");
+names.add("Charlie");
+
+System.out.println(names.get(1));  // Output: Bob
+names.remove("Alice");
+System.out.println(names);         // Output: [Bob, Charlie]
+
