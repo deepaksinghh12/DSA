@@ -33,8 +33,15 @@ But since resizing happens infrequently, the average cost per add() is still O(1
 
 So, add() in ArrayList is amortized O(1).
 
-Example-
+--------------------------------------------------------------------------------------------------
 
+-Traversing an ArrayList-
+
+Using `FOR` loop-Time complexity:O(N)
+                 Space complexity:O(1)
+--------------------------------------------------------------------------------------------------
+
+Example-
 ArrayList<String> names = new ArrayList<>();
 
 names.add("Alice");
