@@ -1,0 +1,23 @@
+---Exercise_01_Middle_Function---
+
+Write a function called middle that takes an array and returns a new array that contains all but the first and last elements.
+myArray = [1, 2, 3, 4]
+middle(myArray)  # [2,3]. 
+
+-----------------------------------------------------------------------------------------------------------------------------
+import java.util.Arrays;
+
+public class Exercise {
+    public static int[] middle(int[] arr) {
+        if (arr.length <= 2) {
+            return new int[0]; // Return empty array if there are no middle elements
+        }
+        return Arrays.copyOfRange(arr, 1, arr.length - 1);
+    }
+
+    public static void main(String[] args) {
+        int[] myArray = {1, 2, 3, 4};
+        int[] result = middle(myArray);
+        System.out.println(Arrays.toString(result)); // Output: [2, 3]
+    }
+}

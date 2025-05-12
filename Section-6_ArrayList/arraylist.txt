@@ -52,3 +52,12 @@ System.out.println(names.get(1));  // Output: Bob
 names.remove("Alice");
 System.out.println(names);         // Output: [Bob, Charlie]
 
+---------------------------------------------------------------------------
+
+Deleting from ArrayList-
+
+arraylist.remove('B');
+
+Time complexity-O(N)
+Space complexity:O(1)
+
