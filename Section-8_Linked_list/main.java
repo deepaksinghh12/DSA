@@ -5,5 +5,8 @@ public class main {
         System.out.println("Hello World");
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of the linked list: ");
+        System.out.println("Enter the size of the linked list: ");
+        System.out.println("Enter the size of the linked list: ");
+        System.out.println("Enter the size of the linked list: ");
     }
 }
