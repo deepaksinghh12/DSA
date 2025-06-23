@@ -7,4 +7,3 @@ Tail
 - Each car is independent 
 - Cars : passengers and links (nodes: data and links)
 www.appmillers.com
-done for today again again
