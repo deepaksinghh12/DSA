@@ -1,5 +1,3 @@
-// Save this file as uniqueelements.java
-
 // No imports needed since we are not using any collections
 
 // Main class
