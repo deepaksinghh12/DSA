@@ -19,4 +19,4 @@ public class findOriginalTypedString {
         System.out.println("Output (consecutive same characters count + 1): " + result);
     }
 }
-// This code counts the number of consecutive duplicate characters in a string
+// This code counts the number of consecutive duplicate characters in a string.
