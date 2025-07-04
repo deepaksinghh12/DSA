@@ -46,4 +46,4 @@ public class BestTimetoBuyandSellStockLeetCode121 {
     }
 }
 // This code calculates the maximum profit from buying and selling a stock once.
-
+//leetcode 
