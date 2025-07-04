@@ -22,3 +22,4 @@ public class primarydiagonals {
         System.out.println("Sum of primary diagonal elements: " + result);
     }
 }
+    
