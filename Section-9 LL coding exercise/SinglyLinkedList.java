@@ -2,6 +2,21 @@ public class SinglyLinkedList {
   public Node head;
   public Node tail;
   public int size;
+
+  // Node class definition
+  public static class Node {
+    public int value;
+    public Node next;
+
+    public Node() {
+      // Default constructor
+    }
+
+    public Node(int value) {
+      this.value = value;
+      this.next = null;
+    }
+  }
  
   public Node insertSinglyLinkedList(int nodeValue) {
     head = new Node();
