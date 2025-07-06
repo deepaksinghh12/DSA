@@ -6,5 +6,10 @@ public class main {
 
         myLinkedList.insert(10); // Insert first element        
         myLinkedList.insert(20); // Insert second element
+        myLinkedList.insert(30); // Insert third element
+        myLinkedList.insert(40); // Insert fourth element
+        myLinkedList.insert(50); // Insert fifth element
+
+        myLinkedList.display(); // Display the list after insertions
     }
 }

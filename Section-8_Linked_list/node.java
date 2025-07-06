@@ -1,4 +1,4 @@
-public class node {
+public class Node {
     int data;
     Node next;
     // Constructor to initialize the node with data
