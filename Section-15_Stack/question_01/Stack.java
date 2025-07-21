@@ -15,4 +15,14 @@ public class Stack{
             return false;
         }
     }
+    //isFull method to check if the stack is full
+    public boolean isFull(){
+        if(topOfStack == arr.length - 1){
+            return true;
+        
+        } else {
+            return false;
+        }
+    }
+    //more methods to come
 }
