@@ -24,5 +24,5 @@ public class Stack{
             return false;
         }
     }
-    //more methods to come
+    //more methods to come soon
 }
