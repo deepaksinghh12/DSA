@@ -6,3 +6,5 @@ class main {
         // System.out.println("Is the stack empty? " + result);
     }
 }
+
+//stack creation main method
