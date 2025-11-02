@@ -3,7 +3,7 @@ public class ArmstrongCheck {
         int num = 153;           // The number to be checked.
         int temp = num;          // Store the original number (153) for the final comparison.
         int sum = 0;             // Initialize the variable to accumulate the sum of powered digits.
-        int digits = 0;          // Initialize the counter for the total number of digits.
+        int digits = 0;          // Initialize the counter for the total number of digits..
         
         // Use a separate variable 'n' for counting and calculation loops to preserve 'num' and 'temp'.
         int n = num;
