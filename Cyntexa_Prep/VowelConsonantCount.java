@@ -1,6 +1,5 @@
 public class VowelConsonantCount {
     public static void main(String[] args) {
-        // 1. Define the input string.
         String str = "Deepak Singh"; 
         
         // 2. Convert the entire string to lowercase. 
@@ -26,7 +25,6 @@ public class VowelConsonantCount {
                 
                 // 6. Secondary check: If it's a letter, check if it's a vowel.
                 if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
-                    // If it matches any of the vowels, increment the vowel counter.
                     vowels++; 
                 
                 else 
